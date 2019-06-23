@@ -15,7 +15,7 @@ class Translate{
         this.xhr.onload = ()=>{
             if(this.xhr.status === 200){
                 const json = JSON.parse(this.xhr.responseText);
-                const text = json[0];
+                const text = json.text[0];
                 callback(null,text);
             }
             else{
